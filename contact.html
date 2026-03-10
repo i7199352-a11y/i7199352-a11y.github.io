@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Celestial Horoscope — Get in Touch</title>
+  <meta name="description" content="Contact the Celestial Horoscope team. Reach out with questions, feedback, partnership inquiries, or collaboration ideas.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://yourusername.github.io/contact.html">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><div class="header-inner">
+  <a href="index.html" class="logo"><span class="logo-title">✦ Celestial Horoscope</span><span class="logo-tagline">Daily Astrology &amp; Cosmic Guidance</span></a>
+  <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+  <nav id="main-nav"><ul><li><a href="index.html">Home</a></li><li><a href="today/index.html">Today</a></li><li><a href="zodiac/aries.html">Zodiac</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" class="active">Contact</a></li><li><a href="today/index.html" class="nav-cta">Today's Horoscope</a></li></ul></nav>
+</div></header>
+
+<main>
+  <div class="container simple-page">
+    <nav class="breadcrumb"><a href="index.html">Home</a><span>›</span>Contact</nav>
+    <h1>Contact Us</h1>
+    <p class="page-intro">Questions, feedback, or collaboration ideas? We'd love to hear from you.</p>
+
+    <div class="ad-slot ad-slot-leaderboard"></div>
+
+    <h2>Get in Touch</h2>
+    <p>Use the form below to send us a message. We aim to respond within 2–3 business days. For advertising and partnership inquiries, please select the appropriate subject below.</p>
+
+    <!-- Contact Form — connects to a form service like Formspree, Netlify Forms, etc. -->
+    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" aria-label="Contact form">
+      <!-- Replace YOUR_FORM_ID with your Formspree form ID, or use Netlify Forms -->
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="e.g. Luna Starfield" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject">
+          <option value="">Select a topic...</option>
+          <option value="general">General Question</option>
+          <option value="feedback">Feedback / Suggestion</option>
+          <option value="advertising">Advertising Inquiry</option>
+          <option value="partnership">Partnership / Collaboration</option>
+          <option value="correction">Content Correction</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message ✦</button>
+    </form>
+
+    <h2 style="margin-top:3rem;">Advertising</h2>
+    <p>We partner with relevant brands for display advertising and sponsored content. Our readership is passionate about astrology, wellness, spirituality, and personal growth. To discuss advertising options, select "Advertising Inquiry" in the form above.</p>
+
+    <div class="ad-slot ad-slot-banner"></div>
+  </div>
+</main>
+
+<footer><div class="footer-grid">
+  <div class="footer-brand"><a href="index.html" class="logo"><span class="logo-title">✦ Celestial Horoscope</span><span class="logo-tagline">Daily Astrology &amp; Cosmic Guidance</span></a><p>Free daily horoscopes for every cosmic seeker.</p></div>
+  <div class="footer-col"><h5>Daily</h5><ul><li><a href="today/index.html">Today's Horoscope</a></li><li><a href="posts/2026-03-09.html">March 9</a></li><li><a href="posts/2026-03-07.html">March 7</a></li></ul></div>
+  <div class="footer-col"><h5>Signs 1–6</h5><ul><li><a href="zodiac/aries.html">♈ Aries</a></li><li><a href="zodiac/taurus.html">♉ Taurus</a></li><li><a href="zodiac/gemini.html">♊ Gemini</a></li><li><a href="zodiac/cancer.html">♋ Cancer</a></li><li><a href="zodiac/leo.html">♌ Leo</a></li><li><a href="zodiac/virgo.html">♍ Virgo</a></li></ul></div>
+  <div class="footer-col"><h5>Signs 7–12</h5><ul><li><a href="zodiac/libra.html">♎ Libra</a></li><li><a href="zodiac/scorpio.html">♏ Scorpio</a></li><li><a href="zodiac/sagittarius.html">♐ Sagittarius</a></li><li><a href="zodiac/capricorn.html">♑ Capricorn</a></li><li><a href="zodiac/aquarius.html">♒ Aquarius</a></li><li><a href="zodiac/pisces.html">♓ Pisces</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 Celestial Horoscope. For entertainment purposes only.</p><p><a href="privacy.html">Privacy Policy</a> · <a href="contact.html">Contact</a> · <a href="about.html">About</a></p></div></footer>
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>function toggleNav(){document.getElementById('main-nav').classList.toggle('open');}window.addEventListener('scroll',function(){document.getElementById('scrollTop').classList.toggle('visible',window.scrollY>300);});</script>
+</body>
+</html>

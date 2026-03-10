@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://yourusername.github.io/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://yourusername.github.io/today/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://yourusername.github.io/posts/2026-03-09.html</loc><lastmod>2026-03-09</lastmod><priority>0.9</priority></url>
+  <url><loc>https://yourusername.github.io/posts/2026-03-08.html</loc><lastmod>2026-03-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://yourusername.github.io/posts/2026-03-07.html</loc><lastmod>2026-03-07</lastmod><priority>0.8</priority></url>
+  <url><loc>https://yourusername.github.io/zodiac/aries.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yourusername.github.io/zodiac/taurus.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yourusername.github.io/zodiac/gemini.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yourusername.github.io/zodiac/cancer.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yourusername.github.io/zodiac/leo.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yourusername.github.io/zodiac/virgo.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yourusername.github.io/zodiac/libra.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yourusername.github.io/zodiac/scorpio.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yourusername.github.io/zodiac/sagittarius.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yourusername.github.io/zodiac/capricorn.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yourusername.github.io/zodiac/aquarius.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yourusername.github.io/zodiac/pisces.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yourusername.github.io/about.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://yourusername.github.io/contact.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://yourusername.github.io/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

@@ -1,0 +1,791 @@
+/* =============================================
+   CELESTIAL HOROSCOPE — style.css
+   Theme: Deep Cosmos / Luxury Editorial
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;600&display=swap');
+
+/* --- CSS Variables --- */
+:root {
+  --bg:         #0b0c14;
+  --bg2:        #111220;
+  --bg3:        #181929;
+  --surface:    #1c1e30;
+  --border:     #2a2d45;
+  --gold:       #c9a84c;
+  --gold-light: #e8c97a;
+  --gold-dim:   #8a6e2f;
+  --text:       #e8e6f0;
+  --text-muted: #8a8aa8;
+  --accent:     #7b6fb5;
+  --accent2:    #4b7bbd;
+  --white:      #ffffff;
+  --max-w:      1100px;
+  --radius:     10px;
+  --font-head:  'Cormorant Garamond', Georgia, serif;
+  --font-body:  'Josefin Sans', sans-serif;
+}
+
+/* --- Reset & Base --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* Star background effect */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.35) 0%, transparent 100%),
+    radial-gradient(1px 1px at 30% 45%, rgba(255,255,255,0.2) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 55% 20%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 75% 60%, rgba(255,255,255,0.25) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 10%, rgba(255,255,255,0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 20% 80%, rgba(255,255,255,0.15) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 60% 75%, rgba(255,255,255,0.25) 0%, transparent 100%),
+    radial-gradient(1px 1px at 85% 35%, rgba(255,255,255,0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 42% 90%, rgba(255,255,255,0.15) 0%, transparent 100%),
+    radial-gradient(1px 1px at 5% 55%, rgba(255,255,255,0.2) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--gold); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--gold-light); }
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-head);
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--gold-light);
+}
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2.4rem); }
+h3 { font-size: clamp(1.2rem, 2.5vw, 1.8rem); }
+h4 { font-size: 1.2rem; }
+
+p { margin-bottom: 1rem; color: var(--text); font-size: 0.95rem; }
+
+/* --- Layout --- */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Header & Navigation --- */
+header {
+  background: linear-gradient(180deg, rgba(11,12,20,0.98) 0%, rgba(11,12,20,0.85) 100%);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+.logo-title {
+  font-family: var(--font-head);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+}
+.logo-tagline {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+nav a {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+nav a:hover, nav a.active { color: var(--gold); }
+
+.nav-cta {
+  background: linear-gradient(135deg, var(--gold-dim), var(--gold));
+  color: var(--bg) !important;
+  padding: 0.45rem 1.1rem;
+  border-radius: 30px;
+  font-weight: 600 !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.1em;
+}
+.nav-cta:hover { background: linear-gradient(135deg, var(--gold), var(--gold-light)) !important; color: var(--bg) !important; }
+
+/* Mobile nav toggle */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--gold);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* --- Hero Banner --- */
+.hero {
+  text-align: center;
+  padding: 5rem 1.5rem 4rem;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(123,111,181,0.18) 0%, transparent 70%);
+  position: relative;
+  z-index: 1;
+}
+.hero-star {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.hero h1 { margin-bottom: 0.75rem; }
+.hero p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  max-width: 500px;
+  margin: 0 auto 2rem;
+}
+.hero-date {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 0.5rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold-dim), var(--gold));
+  color: var(--bg);
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--bg);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201,168,76,0.3);
+}
+.btn-outline {
+  border: 1px solid var(--gold-dim);
+  color: var(--gold);
+  background: transparent;
+}
+.btn-outline:hover {
+  border-color: var(--gold);
+  background: rgba(201,168,76,0.08);
+  transform: translateY(-2px);
+}
+
+/* --- Section Styles --- */
+section { padding: 3rem 0; }
+.section-title {
+  text-align: center;
+  margin-bottom: 0.4rem;
+}
+.section-subtitle {
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 2.5rem;
+}
+.divider {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0.75rem auto 0.5rem;
+}
+
+/* --- Zodiac Wheel / Navigation --- */
+.zodiac-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.75rem;
+}
+.zodiac-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 0.5rem;
+  text-align: center;
+  transition: all 0.25s;
+  cursor: pointer;
+  display: block;
+  color: var(--text);
+}
+.zodiac-card:hover {
+  border-color: var(--gold-dim);
+  background: var(--bg3);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  color: var(--gold-light);
+}
+.zodiac-card .symbol {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.zodiac-card .name {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.zodiac-card:hover .name { color: var(--gold); }
+.zodiac-card .dates {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+/* --- Article Cards --- */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.article-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all 0.25s;
+  display: flex;
+  flex-direction: column;
+}
+.article-card:hover {
+  border-color: var(--gold-dim);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+.article-card-thumb {
+  height: 140px;
+  background: linear-gradient(135deg, var(--bg2), var(--bg3));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  border-bottom: 1px solid var(--border);
+}
+.article-card-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
+.article-meta {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 0.5rem;
+}
+.article-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+.article-card h3 a { color: var(--text); }
+.article-card h3 a:hover { color: var(--gold-light); }
+.article-card p { font-size: 0.85rem; color: var(--text-muted); flex: 1; }
+.article-card-footer {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.read-more {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+.read-more:hover { color: var(--gold-light); }
+.tag {
+  font-size: 0.65rem;
+  background: rgba(201,168,76,0.1);
+  color: var(--gold-dim);
+  border: 1px solid rgba(201,168,76,0.2);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* --- Today's Horoscope Banner --- */
+.today-banner {
+  background: linear-gradient(135deg, var(--surface), var(--bg3));
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.today-banner-text h2 { font-size: 1.8rem; margin-bottom: 0.4rem; }
+.today-banner-text p { color: var(--text-muted); font-size: 0.85rem; margin: 0; }
+
+/* --- Ad Placeholder --- */
+.ad-slot {
+  background: var(--bg3);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
+.ad-slot::before { content: '[ Advertisement ]'; display: block; margin-bottom: 0.3rem; color: var(--gold-dim); }
+.ad-slot-leaderboard { min-height: 90px; }
+.ad-slot-rectangle { min-height: 250px; }
+.ad-slot-banner { min-height: 60px; }
+
+/* --- Post / Article Page --- */
+.post-hero {
+  padding: 3rem 1.5rem 2rem;
+  text-align: center;
+  background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(75,123,189,0.15) 0%, transparent 70%);
+}
+.post-date {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 0.75rem;
+}
+.post-hero h1 { margin-bottom: 1rem; }
+.post-intro {
+  font-family: var(--font-head);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.post-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2.5rem;
+  align-items: start;
+}
+.post-content { min-width: 0; }
+.post-sidebar { position: sticky; top: 80px; }
+
+/* Sign Sections */
+.sign-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.sign-section:hover { border-color: var(--gold-dim); }
+.sign-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg3);
+  border-bottom: 1px solid var(--border);
+}
+.sign-symbol-lg {
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  background: rgba(201,168,76,0.1);
+  border: 1px solid var(--gold-dim);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.sign-header-info h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+  color: var(--gold-light);
+}
+.sign-header-info small {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+.sign-body { padding: 1.5rem; }
+.sign-body p { font-size: 0.9rem; margin-bottom: 0.5rem; }
+.sign-link {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+/* Star rating */
+.forecast-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+.forecast-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.stars { color: var(--gold); font-size: 0.8rem; }
+
+/* Sidebar widgets */
+.sidebar-widget {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.sidebar-widget h4 {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.sidebar-links { list-style: none; }
+.sidebar-links li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.82rem;
+}
+.sidebar-links li:last-child { border-bottom: none; }
+.sidebar-links a { color: var(--text-muted); }
+.sidebar-links a:hover { color: var(--gold); }
+.sidebar-zodiac-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+.sidebar-zodiac-item {
+  text-align: center;
+  padding: 0.5rem 0.25rem;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  transition: all 0.2s;
+}
+.sidebar-zodiac-item:hover {
+  border-color: var(--gold-dim);
+  color: var(--gold);
+  background: var(--bg2);
+}
+.sidebar-zodiac-item .sym { font-size: 1.2rem; display: block; margin-bottom: 0.15rem; }
+
+/* --- Zodiac Sign Page --- */
+.zodiac-hero {
+  text-align: center;
+  padding: 4rem 1.5rem 3rem;
+  background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(123,111,181,0.2) 0%, transparent 70%);
+}
+.zodiac-hero .big-symbol {
+  font-size: 5rem;
+  display: block;
+  margin-bottom: 1rem;
+  animation: float 4s ease-in-out infinite;
+}
+.zodiac-hero .sign-dates {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 0.5rem;
+}
+.zodiac-traits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+.trait-pill {
+  background: rgba(201,168,76,0.1);
+  border: 1px solid rgba(201,168,76,0.25);
+  color: var(--gold-light);
+  padding: 0.3rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.info-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  text-align: center;
+}
+.info-card .info-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 0.35rem;
+}
+.info-card .info-value {
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+/* --- Breadcrumb --- */
+.breadcrumb {
+  padding: 0.75rem 0;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+.breadcrumb a { color: var(--text-muted); }
+.breadcrumb a:hover { color: var(--gold); }
+.breadcrumb span { margin: 0 0.4rem; }
+
+/* --- Simple Pages (About, Contact, Privacy) --- */
+.simple-page { padding: 3rem 0 5rem; }
+.simple-page h1 { margin-bottom: 0.5rem; }
+.simple-page .page-intro {
+  font-family: var(--font-head);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.simple-page h2 {
+  font-size: 1.4rem;
+  margin: 2rem 0 0.75rem;
+  color: var(--gold-light);
+}
+.simple-page p, .simple-page li { font-size: 0.9rem; color: var(--text-muted); }
+.simple-page ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+.simple-page li { margin-bottom: 0.35rem; }
+
+/* Contact form */
+.contact-form { max-width: 600px; }
+.form-group { margin-bottom: 1.25rem; }
+.form-group label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 0.4rem;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--gold-dim);
+}
+.form-group textarea { min-height: 140px; resize: vertical; }
+
+/* --- Footer --- */
+footer {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  padding: 3rem 1.5rem 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+  max-width: var(--max-w);
+  margin: 0 auto 2.5rem;
+}
+.footer-brand .logo-title { font-size: 1.3rem; }
+.footer-brand p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+  max-width: 250px;
+}
+.footer-col h5 {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 1rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 0.5rem; }
+.footer-col a { color: var(--text-muted); font-size: 0.82rem; }
+.footer-col a:hover { color: var(--gold); }
+.footer-bottom {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.footer-bottom p { font-size: 0.75rem; color: var(--text-muted); margin: 0; }
+.footer-bottom a { color: var(--text-muted); }
+.footer-bottom a:hover { color: var(--gold); }
+
+/* --- Utility --- */
+.text-center { text-align: center; }
+.text-gold { color: var(--gold); }
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 2rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 2rem; }
+.flex { display: flex; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.gap-1 { gap: 0.5rem; }
+.gap-2 { gap: 1rem; }
+
+/* Scroll to top */
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  background: var(--gold);
+  color: var(--bg);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  transition: all 0.25s;
+  box-shadow: 0 4px 12px rgba(201,168,76,0.3);
+}
+.scroll-top:hover { background: var(--gold-light); transform: translateY(-3px); }
+.scroll-top.visible { display: flex; }
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .zodiac-grid { grid-template-columns: repeat(4, 1fr); }
+  .post-layout { grid-template-columns: 1fr; }
+  .post-sidebar { position: static; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 680px) {
+  .header-inner { padding: 0.75rem 1.25rem; }
+  nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 1rem 1.5rem; }
+  nav.open { display: flex; }
+  nav ul { flex-direction: column; gap: 1rem; }
+  .nav-toggle { display: flex; }
+  .zodiac-grid { grid-template-columns: repeat(3, 1fr); }
+  .today-banner { flex-direction: column; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .hero { padding: 3rem 1.25rem 2.5rem; }
+}
+@media (max-width: 420px) {
+  .zodiac-grid { grid-template-columns: repeat(2, 1fr); }
+  .info-grid { grid-template-columns: repeat(2, 1fr); }
+}

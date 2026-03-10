@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celestial Horoscope — Daily Astrology, Horoscopes & Zodiac Readings</title>
+  <meta name="description" content="Read your free daily horoscope for all 12 zodiac signs. Explore astrology forecasts, birth chart insights, and cosmic guidance updated every day.">
+  <meta name="keywords" content="daily horoscope, astrology, zodiac signs, horoscope today, free horoscope, aries horoscope, taurus horoscope">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://yourusername.github.io/">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Celestial Horoscope — Daily Astrology & Zodiac Readings">
+  <meta property="og:description" content="Free daily horoscopes for all 12 zodiac signs. Cosmic guidance, astrology insights, and zodiac compatibility updated every day.">
+  <meta property="og:url" content="https://yourusername.github.io/">
+  <meta property="og:image" content="https://yourusername.github.io/images/og-home.jpg">
+  <meta property="og:site_name" content="Celestial Horoscope">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Celestial Horoscope — Daily Astrology & Zodiac Readings">
+  <meta name="twitter:description" content="Free daily horoscopes for all 12 zodiac signs. Updated daily.">
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Celestial Horoscope",
+    "url": "https://yourusername.github.io/",
+    "description": "Daily horoscopes and astrology for all 12 zodiac signs",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://yourusername.github.io/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Celestial Horoscope Home">
+      <span class="logo-title">✦ Celestial Horoscope</span>
+      <span class="logo-tagline">Daily Astrology &amp; Cosmic Guidance</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav" role="navigation" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="today/index.html">Today</a></li>
+        <li><a href="zodiac/aries.html">Zodiac</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="today/index.html" class="nav-cta">Today's Horoscope</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="hero-star">✦</span>
+  <p class="hero-date">Monday, March 9, 2026 · Full Moon in Virgo</p>
+  <h1>Your Daily Cosmic Guidance</h1>
+  <p>Discover what the stars have in store for you today. Free daily horoscopes, zodiac insights, and astrology forecasts for all 12 signs.</p>
+  <a href="today/index.html" class="btn btn-primary">Read Today's Horoscope</a>
+</section>
+
+<main>
+  <div class="container">
+
+    <!-- AD SLOT TOP -->
+    <div class="ad-slot ad-slot-leaderboard" aria-label="Advertisement">
+      <!-- Google AdSense: Replace with your ad unit code -->
+      <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="XXXXXXXX" data-ad-format="auto"></ins> -->
+    </div>
+
+    <!-- TODAY'S BANNER -->
+    <section aria-labelledby="today-heading">
+      <div class="today-banner">
+        <div class="today-banner-text">
+          <h2 id="today-heading">🌕 Today's Horoscope — March 9, 2026</h2>
+          <p>The Full Moon in Virgo illuminates themes of health, routine, and clarity. A powerful day for reflection across all signs.</p>
+        </div>
+        <a href="today/index.html" class="btn btn-outline">Read All 12 Signs →</a>
+      </div>
+    </section>
+
+    <!-- ZODIAC SIGN NAVIGATION -->
+    <section aria-labelledby="zodiac-nav-heading">
+      <h2 class="section-title" id="zodiac-nav-heading">Your Zodiac Sign</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Select your sign for a personalized reading</p>
+      <nav class="zodiac-grid" aria-label="Zodiac signs">
+        <a href="zodiac/aries.html" class="zodiac-card"><span class="symbol">♈</span><span class="name">Aries</span><span class="dates">Mar 21 – Apr 19</span></a>
+        <a href="zodiac/taurus.html" class="zodiac-card"><span class="symbol">♉</span><span class="name">Taurus</span><span class="dates">Apr 20 – May 20</span></a>
+        <a href="zodiac/gemini.html" class="zodiac-card"><span class="symbol">♊</span><span class="name">Gemini</span><span class="dates">May 21 – Jun 20</span></a>
+        <a href="zodiac/cancer.html" class="zodiac-card"><span class="symbol">♋</span><span class="name">Cancer</span><span class="dates">Jun 21 – Jul 22</span></a>
+        <a href="zodiac/leo.html" class="zodiac-card"><span class="symbol">♌</span><span class="name">Leo</span><span class="dates">Jul 23 – Aug 22</span></a>
+        <a href="zodiac/virgo.html" class="zodiac-card"><span class="symbol">♍</span><span class="name">Virgo</span><span class="dates">Aug 23 – Sep 22</span></a>
+        <a href="zodiac/libra.html" class="zodiac-card"><span class="symbol">♎</span><span class="name">Libra</span><span class="dates">Sep 23 – Oct 22</span></a>
+        <a href="zodiac/scorpio.html" class="zodiac-card"><span class="symbol">♏</span><span class="name">Scorpio</span><span class="dates">Oct 23 – Nov 21</span></a>
+        <a href="zodiac/sagittarius.html" class="zodiac-card"><span class="symbol">♐</span><span class="name">Sagittarius</span><span class="dates">Nov 22 – Dec 21</span></a>
+        <a href="zodiac/capricorn.html" class="zodiac-card"><span class="symbol">♑</span><span class="name">Capricorn</span><span class="dates">Dec 22 – Jan 19</span></a>
+        <a href="zodiac/aquarius.html" class="zodiac-card"><span class="symbol">♒</span><span class="name">Aquarius</span><span class="dates">Jan 20 – Feb 18</span></a>
+        <a href="zodiac/pisces.html" class="zodiac-card"><span class="symbol">♓</span><span class="name">Pisces</span><span class="dates">Feb 19 – Mar 20</span></a>
+      </nav>
+    </section>
+
+    <!-- LATEST ARTICLES -->
+    <section aria-labelledby="latest-heading">
+      <h2 class="section-title" id="latest-heading">Latest Horoscopes</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Fresh cosmic insights, delivered daily</p>
+      <div class="articles-grid">
+
+        <article class="article-card">
+          <div class="article-card-thumb">🌕</div>
+          <div class="article-card-body">
+            <p class="article-meta">March 9, 2026 · Daily Horoscope</p>
+            <h3><a href="posts/2026-03-09.html">Daily Horoscope for March 9, 2026 — Full Moon in Virgo</a></h3>
+            <p>The Full Moon in Virgo brings heightened awareness and analytical energy. Discover how this powerful lunar event shapes your day.</p>
+          </div>
+          <div class="article-card-footer">
+            <a href="posts/2026-03-09.html" class="read-more">Read More →</a>
+            <span class="tag">Daily</span>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-card-thumb">☿</div>
+          <div class="article-card-body">
+            <p class="article-meta">March 8, 2026 · Weekly Forecast</p>
+            <h3><a href="posts/2026-03-08.html">Daily Horoscope for March 8, 2026 — Mercury Sextile Saturn</a></h3>
+            <p>Mercury's harmonious angle to Saturn sharpens minds and rewards disciplined communication. A productive day for all earth signs.</p>
+          </div>
+          <div class="article-card-footer">
+            <a href="posts/2026-03-08.html" class="read-more">Read More →</a>
+            <span class="tag">Daily</span>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-card-thumb">♈</div>
+          <div class="article-card-body">
+            <p class="article-meta">March 7, 2026 · Daily Horoscope</p>
+            <h3><a href="posts/2026-03-07.html">Daily Horoscope for March 7, 2026 — Mars Enters Gemini</a></h3>
+            <p>Mars ignites the quick-thinking sign of Gemini, sparking curiosity, wit, and the desire for new connections across all signs.</p>
+          </div>
+          <div class="article-card-footer">
+            <a href="posts/2026-03-07.html" class="read-more">Read More →</a>
+            <span class="tag">Daily</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- AD SLOT MID -->
+    <div class="ad-slot ad-slot-rectangle" aria-label="Advertisement">
+      <!-- Google AdSense: Replace with your ad unit code -->
+    </div>
+
+    <!-- FEATURED ARTICLES -->
+    <section aria-labelledby="featured-heading">
+      <h2 class="section-title" id="featured-heading">Featured Astrology</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">In-depth guides and cosmic wisdom</p>
+      <div class="articles-grid">
+
+        <article class="article-card">
+          <div class="article-card-thumb">🌙</div>
+          <div class="article-card-body">
+            <p class="article-meta">Astrology Guide</p>
+            <h3><a href="zodiac/aries.html">Aries ♈ — The Pioneer of the Zodiac</a></h3>
+            <p>Bold, ambitious, and fiercely independent — explore the complete guide to the first sign of the zodiac.</p>
+          </div>
+          <div class="article-card-footer">
+            <a href="zodiac/aries.html" class="read-more">Explore →</a>
+            <span class="tag">Zodiac</span>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-card-thumb">🌸</div>
+          <div class="article-card-body">
+            <p class="article-meta">Astrology Guide</p>
+            <h3><a href="zodiac/taurus.html">Taurus ♉ — The Grounded Earthkeeper</a></h3>
+            <p>Patient, sensual, and steadfast — a deep dive into Taurus energy, traits, compatibility, and cosmic destiny.</p>
+          </div>
+          <div class="article-card-footer">
+            <a href="zodiac/taurus.html" class="read-more">Explore →</a>
+            <span class="tag">Zodiac</span>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-card-thumb">⭐</div>
+          <div class="article-card-body">
+            <p class="article-meta">Astrology 101</p>
+            <h3><a href="about.html">How to Read Your Daily Horoscope</a></h3>
+            <p>New to astrology? Learn how to use your sun sign, rising sign, and moon sign for the most accurate daily guidance.</p>
+          </div>
+          <div class="article-card-footer">
+            <a href="about.html" class="read-more">Learn More →</a>
+            <span class="tag">Guide</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- AD SLOT BOTTOM -->
+    <div class="ad-slot ad-slot-banner" aria-label="Advertisement">
+      <!-- Google AdSense: Replace with your ad unit code -->
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo" aria-label="Home">
+        <span class="logo-title">✦ Celestial Horoscope</span>
+        <span class="logo-tagline">Daily Astrology &amp; Cosmic Guidance</span>
+      </a>
+      <p>Free daily horoscopes, zodiac sign profiles, and astrology wisdom for every cosmic seeker.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Daily</h5>
+      <ul>
+        <li><a href="today/index.html">Today's Horoscope</a></li>
+        <li><a href="posts/2026-03-09.html">March 9, 2026</a></li>
+        <li><a href="posts/2026-03-08.html">March 8, 2026</a></li>
+        <li><a href="posts/2026-03-07.html">March 7, 2026</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Zodiac Signs</h5>
+      <ul>
+        <li><a href="zodiac/aries.html">♈ Aries</a></li>
+        <li><a href="zodiac/taurus.html">♉ Taurus</a></li>
+        <li><a href="zodiac/gemini.html">♊ Gemini</a></li>
+        <li><a href="zodiac/cancer.html">♋ Cancer</a></li>
+        <li><a href="zodiac/leo.html">♌ Leo</a></li>
+        <li><a href="zodiac/virgo.html">♍ Virgo</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>More Signs</h5>
+      <ul>
+        <li><a href="zodiac/libra.html">♎ Libra</a></li>
+        <li><a href="zodiac/scorpio.html">♏ Scorpio</a></li>
+        <li><a href="zodiac/sagittarius.html">♐ Sagittarius</a></li>
+        <li><a href="zodiac/capricorn.html">♑ Capricorn</a></li>
+        <li><a href="zodiac/aquarius.html">♒ Aquarius</a></li>
+        <li><a href="zodiac/pisces.html">♓ Pisces</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Celestial Horoscope. For entertainment purposes only.</p>
+    <p><a href="privacy.html">Privacy Policy</a> · <a href="contact.html">Contact</a> · <a href="about.html">About</a></p>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+  function toggleNav() {
+    document.getElementById('main-nav').classList.toggle('open');
+  }
+  window.addEventListener('scroll', function() {
+    document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 300);
+  });
+</script>
+</body>
+</html>
